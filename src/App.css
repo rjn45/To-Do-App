@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+body {
+  /* background: linear-gradient(135deg, #a1c4fd, #c2e9fb, #fbc2eb, #fda085); */
+  font-family: Poppins, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.todo-container {
+  width: 420px;
+  backdrop-filter: blur(20px);
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb, #fbc2eb, #fda085);
+  padding: 40px;
+  margin: 50px auto;
+  border-radius: 12px;
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.6);
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.message {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.input-box {
+  display: flex;
+  gap: 10px;
+}
+
+.input-box input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.input-box button {
+  padding: 12px 18px;
+  border: none;
+  background: rgb(185, 231, 3);
   color: white;
+  border-radius: 6px;
+  font-size: 20px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.input-box button:hover {
+  background: #c6e2cd;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list-section {
+  margin-top: 20px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fafafa;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.todo-item.done span {
+  text-decoration: line-through;
+  color: gray;
 }
